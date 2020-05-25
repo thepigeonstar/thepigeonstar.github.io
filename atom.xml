@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Acewhyssr.com</id>
     <title>Ace pigeon</title>
-    <updated>2020-05-19T07:06:00.666Z</updated>
+    <updated>2020-05-25T06:18:17.979Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Acewhyssr.com"/>
     <link rel="self" href="https://Acewhyssr.com/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://Acewhyssr.com/favicon.ico</icon>
     <rights>All rights reserved 2020, Ace pigeon</rights>
     <entry>
-        <title type="html"><![CDATA[免费SSR节点分享（附带使用方法）]]></title>
+        <title type="html"><![CDATA[免费节点分享（附带使用方法）]]></title>
         <id>https://Acewhyssr.com/post/mfjd/</id>
         <link href="https://Acewhyssr.com/post/mfjd/">
         </link>
