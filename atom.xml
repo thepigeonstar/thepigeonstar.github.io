@@ -2,35 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Acepigeon.github.io</id>
     <title>Ace pigeon</title>
-    <updated>2020-06-28T09:52:59.702Z</updated>
+    <updated>2020-06-28T10:45:45.713Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Acepigeon.github.io"/>
     <link rel="self" href="https://Acepigeon.github.io/atom.xml"/>
-    <subtitle>免费节点分享（附带使用方法）</subtitle>
+    <subtitle>备份用</subtitle>
     <logo>https://Acepigeon.github.io/images/avatar.png</logo>
     <icon>https://Acepigeon.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Ace pigeon</rights>
-    <entry>
-        <title type="html"><![CDATA[免费节点分享（附带使用方法）]]></title>
-        <id>https://Acepigeon.github.io/post/mfjd/</id>
-        <link href="https://Acepigeon.github.io/post/mfjd/">
-        </link>
-        <updated>2020-05-12T07:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p><strong>更多免费优质线路群：794703858</strong><br>
-<strong>使用方法：<a href="https://www.evernote.com/l/AU_hxEKvoLVF749lY3JAt7u89wEaeLn2MQw/">[点我进入]</a></strong></p>
-]]></summary>
-        <content type="html"><![CDATA[<p><strong>更多免费优质线路群：794703858</strong><br>
-<strong>使用方法：<a href="https://www.evernote.com/l/AU_hxEKvoLVF749lY3JAt7u89wEaeLn2MQw/">[点我进入]</a></strong></p>
-<!-- more -->
-<h2 id="节点">节点👇</h2>
-<p>美国<br>
-ssr://MTYyLjI0NS4yMzkuNjg6Nzc3Om9yaWdpbjpyYzQ6cGxhaW46Ym5Sa2RIWXVZMjl0Lz9vYmZzcGFyYW09JnJlbWFya3M9NVppazVaaWs1b0NxZmcmZ3JvdXA9NTc2TzVadTk</p>
-<p>香港1<br>
-ssr://MTUzLjEwMS41Ny4xMDoxMDAwOmF1dGhfYWVzMTI4X21kNTphZXMtMjU2LWNmYjpwbGFpbjpNVEl6TVRJei8_b2Jmc3BhcmFtPSZyZW1hcmtzPTVaaWs1WmlrNW9DcWZnJmdyb3VwPTZhYVo1cml2</p>
-<p>香港2<br>
-ssr://NTAuNy4yNTEuMTU1OjEwMDA6YXV0aF9hZXMxMjhfbWQ1OmFlcy0yNTYtY2ZiOnBsYWluOk1USXpNVEl6Lz9vYmZzcGFyYW09JnJlbWFya3M9NVppazVaaWs1b0NxZmcmZ3JvdXA9NmFhWjVyaXY</p>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://Acepigeon.github.io/post/hello-gridea/</id>
