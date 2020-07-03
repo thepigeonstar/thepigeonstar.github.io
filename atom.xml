@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pigeonstar.club</id>
     <title>Ace pigeon</title>
-    <updated>2020-07-03T04:58:56.118Z</updated>
+    <updated>2020-07-03T08:36:39.513Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pigeonstar.club"/>
     <link rel="self" href="https://pigeonstar.club/atom.xml"/>
@@ -10,6 +10,41 @@
     <logo>https://pigeonstar.club/images/avatar.png</logo>
     <icon>https://pigeonstar.club/favicon.ico</icon>
     <rights>All rights reserved 2020, Ace pigeon</rights>
+    <entry>
+        <title type="html"><![CDATA[VPS服务器24小时Ping值延迟监测工具]]></title>
+        <id>https://pigeonstar.club/post/24h/</id>
+        <link href="https://pigeonstar.club/post/24h/">
+        </link>
+        <updated>2020-07-03T08:29:55.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="依赖安装">依赖安装</h2>
+<p>Debian/Ubuntu</p>
+<pre><code>apt-get update
+apt-get install python wget screen -y
+</code></pre>
+<p>CentOS/RHEL</p>
+<pre><code>yum install screen wget python -y
+</code></pre>
+<h2 id="使用方法">使用方法</h2>
+<pre><code>screen -S uping
+wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/uPing/master/uping.py
+
+python uping.py
+</code></pre>
+<p>提示：第一次使用如果出现乱码，退出后重新输入python uping.py即可</p>
+<h2 id="界面预览">界面预览</h2>
+<figure data-type="image" tabindex="1"><img src="https://pigeonstar.club/post-images/1593765122100.jpg" alt="" loading="lazy"></figure>
+<h2 id="操作说明">操作说明</h2>
+<p><strong>退出界面：Ctrl + A + D<br>
+进入界面：screen -r uping<br>
+退出程序：Ctrl + C<br>
+查看screen进程：screen -ls<br>
+结束screen程序：exit</strong></p>
+<h3 id="版权声明版权归-sunpma-所有转载请注明出处">版权声明：版权归 SunPma 所有，转载请注明出处！</h3>
+<p><a href="https://sunpma.com/631.html" title="原创地址">原创地址</a><br>
+<a href="https://github.com/FunctionClub/uPing" title="GitHub">GitHub</a></p>
+<h3 id="end">End</h3>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[解决VPS时间和本地时间不同]]></title>
         <id>https://pigeonstar.club/post/sjtb/</id>
