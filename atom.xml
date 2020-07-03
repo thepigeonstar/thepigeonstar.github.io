@@ -1,19 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://Acepigeon.github.io</id>
+    <id>https://pigeonstar.club</id>
     <title>Ace pigeon</title>
-    <updated>2020-06-28T10:45:45.713Z</updated>
+    <updated>2020-07-03T04:58:56.118Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://Acepigeon.github.io"/>
-    <link rel="self" href="https://Acepigeon.github.io/atom.xml"/>
+    <link rel="alternate" href="https://pigeonstar.club"/>
+    <link rel="self" href="https://pigeonstar.club/atom.xml"/>
     <subtitle>备份用</subtitle>
-    <logo>https://Acepigeon.github.io/images/avatar.png</logo>
-    <icon>https://Acepigeon.github.io/favicon.ico</icon>
+    <logo>https://pigeonstar.club/images/avatar.png</logo>
+    <icon>https://pigeonstar.club/favicon.ico</icon>
     <rights>All rights reserved 2020, Ace pigeon</rights>
     <entry>
+        <title type="html"><![CDATA[解决VPS时间和本地时间不同]]></title>
+        <id>https://pigeonstar.club/post/sjtb/</id>
+        <link href="https://pigeonstar.club/post/sjtb/">
+        </link>
+        <updated>2020-07-03T04:13:27.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="设置时区为北京时间">设置时区为北京时间</h2>
+<p>部分 VPS 的镜像都是默认的国外时区，使用起来不是很方便。可以把它修改成北京时间，就会方便很多。</p>
+<pre><code>rm -rf /etc/localtime
+ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+</code></pre>
+<h2 id="ntp-同步时间-协议">NTP 同步时间 协议</h2>
+<p>Ubuntu/Debian 系统</p>
+<pre><code>apt-get update
+apt-get install ntp ntpdate -y
+</code></pre>
+<p>CentOS/RHEL 系统</p>
+<pre><code>yum install ntp ntpdate -y
+</code></pre>
+<p>接下来我们需要先停止 NTP 服务器，再更新时间。</p>
+<pre><code>service ntpd stop                 #停止 ntp 服务
+ntpdate us.pool.ntp.org           #同步 ntp 时间
+service ntpd start                #启动 ntp 服务
+</code></pre>
+<p>执行完成后，VPS 上就是相对精确的时间设置了。很多依赖于系统时间的应用程序也就能正常工作了。</p>
+<h2 id="查看所在时区">查看所在时区</h2>
+<pre><code>date -R
+</code></pre>
+<p>得到</p>
+<pre><code>Fri, 06 Mar 2020 14:37:56 +0800
+</code></pre>
+<p>确认一下时区和时间是否正确，无误即可。</p>
+<p><a href="http://https://www.xiaoyu518.com/index.php/author/cxy870724/" title="原文地址：感谢cxy870724">原文地址：感谢cxy870724</a></p>
+<h3 id="end">End</h3>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://Acepigeon.github.io/post/hello-gridea/</id>
-        <link href="https://Acepigeon.github.io/post/hello-gridea/">
+        <id>https://pigeonstar.club/post/hello-gridea/</id>
+        <link href="https://pigeonstar.club/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
