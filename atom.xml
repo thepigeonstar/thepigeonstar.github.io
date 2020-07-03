@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pigeonstar.club</id>
     <title>Ace pigeon</title>
-    <updated>2020-07-03T08:36:39.513Z</updated>
+    <updated>2020-07-03T09:48:59.897Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pigeonstar.club"/>
     <link rel="self" href="https://pigeonstar.club/atom.xml"/>
@@ -46,11 +46,85 @@ python uping.py
 ]]></content>
     </entry>
     <entry>
+        <title type="html"><![CDATA[快速开启Google BBR的方法，实现高效单边加速]]></title>
+        <id>https://pigeonstar.club/post/bbr/</id>
+        <link href="https://pigeonstar.club/post/bbr/">
+        </link>
+        <updated>2020-07-03T05:41:31.000Z</updated>
+        <content type="html"><![CDATA[<p>前言：本文适用于Debian，Ubuntu系统</p>
+<h2 id="查看系统版本">查看系统版本</h2>
+<pre><code>lsb_release -a
+</code></pre>
+<h2 id="修改系统变量">修改系统变量</h2>
+<pre><code>echo &quot;net.core.default_qdisc=fq&quot; &gt;&gt; /etc/sysctl.conf
+echo &quot;net.ipv4.tcp_congestion_control=bbr&quot; &gt;&gt; /etc/sysctl.conf
+</code></pre>
+<h2 id="保存生效">保存生效</h2>
+<pre><code>sysctl -p
+</code></pre>
+<h2 id="查看内核是否已开启bbr">查看内核是否已开启BBR</h2>
+<pre><code>sysctl net.ipv4.tcp_available_congestion_control
+</code></pre>
+<h2 id="显示以下即已开启">显示以下即已开启</h2>
+<p><code>net.ipv4.tcp_available_congestion_control = reno cubic bbr</code></p>
+<h2 id="查看bbr是否启动">查看BBR是否启动</h2>
+<pre><code>lsmod | grep bbr
+</code></pre>
+<h2 id="显示以下即启动成功">显示以下即启动成功</h2>
+<p><code>tcp_bbr 20480 14</code></p>
+<h3 id="end">END</h3>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[傻白一键BBR/BBR Plus/魔改BBR/锐速（LotServer）四合一]]></title>
+        <id>https://pigeonstar.club/post/yjjs/</id>
+        <link href="https://pigeonstar.club/post/yjjs/">
+        </link>
+        <updated>2020-07-03T04:36:56.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="傻白一键bbrbbr-plus魔改bbr锐速旧版">傻白一键BBR/BBR Plus/魔改BBR/锐速（旧版）</h2>
+<pre><code>wget &quot;https://github.com/cx9208/Linux-NetSpeed/raw/master/tcp.sh&quot; &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh
+</code></pre>
+<h2 id="傻白一键bbrbbr-plus魔改bbr锐速新版">傻白一键BBR/BBR Plus/魔改BBR/锐速（新版）</h2>
+<pre><code>wget -N --no-check-certificate &quot;https://github.com/ylx2016/Linux-NetSpeed/releases/download/sh/tcp.sh&quot; &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh
+</code></pre>
+<h2 id="重新进入管理界面">重新进入管理界面</h2>
+<pre><code>./tcp.sh
+</code></pre>
+<h2 id="脚本运行过程中如果出现如下提示用方向键选no回车">脚本运行过程中，如果出现如下提示，用方向键选No回车</h2>
+<figure data-type="image" tabindex="1"><img src="https://pigeonstar.club/post-images/1593769343118.jpg" alt="" loading="lazy"></figure>
+<h3 id="end">END</h3>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[卸载BBR多余内核]]></title>
+        <id>https://pigeonstar.club/post/dynh/</id>
+        <link href="https://pigeonstar.club/post/dynh/">
+        </link>
+        <updated>2020-07-01T05:52:27.000Z</updated>
+        <content type="html"><![CDATA[<p>前言：请先关闭BBR，本文适用于Debian，Ubuntu系统</p>
+<h2 id="列出所有内核">列出所有内核</h2>
+<pre><code>dpkg -l|grep linux-image | awk '{print $2}'
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://pigeonstar.club/post-images/1593766427959.jpg" alt="" loading="lazy"></figure>
+<h2 id="卸载多余内核">卸载多余内核</h2>
+<p>请不要删除所有内核，否则后果自负。</p>
+<pre><code>apt-get purge 其余内核名称 -y
+</code></pre>
+<h2 id="更新grub">更新grub</h2>
+<pre><code>update-grub
+</code></pre>
+<h2 id="重启系统">重启系统</h2>
+<pre><code>reboot
+</code></pre>
+<h3 id="end">End</h3>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[解决VPS时间和本地时间不同]]></title>
         <id>https://pigeonstar.club/post/sjtb/</id>
         <link href="https://pigeonstar.club/post/sjtb/">
         </link>
-        <updated>2020-07-03T04:13:27.000Z</updated>
+        <updated>2020-07-01T04:13:27.000Z</updated>
         <content type="html"><![CDATA[<h2 id="设置时区为北京时间">设置时区为北京时间</h2>
 <p>部分 VPS 的镜像都是默认的国外时区，使用起来不是很方便。可以把它修改成北京时间，就会方便很多。</p>
 <pre><code>rm -rf /etc/localtime
@@ -79,38 +153,6 @@ service ntpd start                #启动 ntp 服务
 <p>确认一下时区和时间是否正确，无误即可。</p>
 <p><a href="http://https://www.xiaoyu518.com/index.php/author/cxy870724/" title="原文地址：感谢cxy870724">原文地址：感谢cxy870724</a></p>
 <h3 id="end">End</h3>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://pigeonstar.club/post/hello-gridea/</id>
-        <link href="https://pigeonstar.club/post/hello-gridea/">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
 ]]></content>
     </entry>
 </feed>

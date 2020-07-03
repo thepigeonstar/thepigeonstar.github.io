@@ -36,13 +36,15 @@
             <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E4%BE%9D%E8%B5%96%E5%AE%89%E8%A3%85">依赖安装</a></li>
-<li><a href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">使用方法</a></li>
-<li><a href="#%E7%95%8C%E9%9D%A2%E9%A2%84%E8%A7%88">界面预览</a></li>
-<li><a href="#%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E">操作说明</a>
+<li><a href="#%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E7%89%88%E6%9C%AC">查看系统版本</a></li>
+<li><a href="#%E4%BF%AE%E6%94%B9%E7%B3%BB%E7%BB%9F%E5%8F%98%E9%87%8F">修改系统变量</a></li>
+<li><a href="#%E4%BF%9D%E5%AD%98%E7%94%9F%E6%95%88">保存生效</a></li>
+<li><a href="#%E6%9F%A5%E7%9C%8B%E5%86%85%E6%A0%B8%E6%98%AF%E5%90%A6%E5%B7%B2%E5%BC%80%E5%90%AFbbr">查看内核是否已开启BBR</a></li>
+<li><a href="#%E6%98%BE%E7%A4%BA%E4%BB%A5%E4%B8%8B%E5%8D%B3%E5%B7%B2%E5%BC%80%E5%90%AF">显示以下即已开启</a></li>
+<li><a href="#%E6%9F%A5%E7%9C%8Bbbr%E6%98%AF%E5%90%A6%E5%90%AF%E5%8A%A8">查看BBR是否启动</a></li>
+<li><a href="#%E6%98%BE%E7%A4%BA%E4%BB%A5%E4%B8%8B%E5%8D%B3%E5%90%AF%E5%8A%A8%E6%88%90%E5%8A%9F">显示以下即启动成功</a>
 <ul>
-<li><a href="#%E7%89%88%E6%9D%83%E5%A3%B0%E6%98%8E%E7%89%88%E6%9D%83%E5%BD%92-sunpma-%E6%89%80%E6%9C%89%E8%BD%AC%E8%BD%BD%E8%AF%B7%E6%B3%A8%E6%98%8E%E5%87%BA%E5%A4%84">版权声明：版权归 SunPma 所有，转载请注明出处！</a></li>
-<li><a href="#end">End</a></li>
+<li><a href="#end">END</a></li>
 </ul>
 </li>
 </ul>
@@ -93,59 +95,63 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">VPS服务器24小时Ping值延迟监测工具</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">快速开启Google BBR的方法，实现高效单边加速</h1>
         <div class="text-sm text-gray-700 lg:my-8">
           2020-07-03 / 1 min read
         </div>
         
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://pigeonstar.club/post-images/24h.jpg" alt="">
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://pigeonstar.club/post-images/bbr.jpg" alt="">
         
         <div class="post-content yue">
-          <h2 id="依赖安装">依赖安装</h2>
-<p>Debian/Ubuntu</p>
-<pre><code>apt-get update
-apt-get install python wget screen -y
+          <p>前言：本文适用于Debian，Ubuntu系统</p>
+<h2 id="查看系统版本">查看系统版本</h2>
+<pre><code>lsb_release -a
 </code></pre>
-<p>CentOS/RHEL</p>
-<pre><code>yum install screen wget python -y
+<h2 id="修改系统变量">修改系统变量</h2>
+<pre><code>echo &quot;net.core.default_qdisc=fq&quot; &gt;&gt; /etc/sysctl.conf
+echo &quot;net.ipv4.tcp_congestion_control=bbr&quot; &gt;&gt; /etc/sysctl.conf
 </code></pre>
-<h2 id="使用方法">使用方法</h2>
-<pre><code>screen -S uping
-wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/uPing/master/uping.py
-
-python uping.py
+<h2 id="保存生效">保存生效</h2>
+<pre><code>sysctl -p
 </code></pre>
-<p>提示：第一次使用如果出现乱码，退出后重新输入python uping.py即可</p>
-<h2 id="界面预览">界面预览</h2>
-<figure data-type="image" tabindex="1"><img src="https://pigeonstar.club/post-images/1593765122100.jpg" alt="" loading="lazy"></figure>
-<h2 id="操作说明">操作说明</h2>
-<p><strong>退出界面：Ctrl + A + D<br>
-进入界面：screen -r uping<br>
-退出程序：Ctrl + C<br>
-查看screen进程：screen -ls<br>
-结束screen程序：exit</strong></p>
-<h3 id="版权声明版权归-sunpma-所有转载请注明出处">版权声明：版权归 SunPma 所有，转载请注明出处！</h3>
-<p><a href="https://sunpma.com/631.html" title="原创地址">原创地址</a><br>
-<a href="https://github.com/FunctionClub/uPing" title="GitHub">GitHub</a></p>
-<h3 id="end">End</h3>
+<h2 id="查看内核是否已开启bbr">查看内核是否已开启BBR</h2>
+<pre><code>sysctl net.ipv4.tcp_available_congestion_control
+</code></pre>
+<h2 id="显示以下即已开启">显示以下即已开启</h2>
+<p><code>net.ipv4.tcp_available_congestion_control = reno cubic bbr</code></p>
+<h2 id="查看bbr是否启动">查看BBR是否启动</h2>
+<pre><code>lsmod | grep bbr
+</code></pre>
+<h2 id="显示以下即启动成功">显示以下即启动成功</h2>
+<p><code>tcp_bbr 20480 14</code></p>
+<h3 id="end">END</h3>
 
         </div>
 
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://pigeonstar.club/tag/WdluVaIKY/">
-            <span class="flex-auto">24h监控ping</span>
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://pigeonstar.club/tag/uh1JSt_bb/">
+            <span class="flex-auto">BBR</span>
           </a>
         
 
 
         <div class="flex justify-between py-8">
           
+            <div class="prev-post">
+              <a href="https://pigeonstar.club/post/24h/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  VPS服务器24小时Ping值延迟监测工具
+                </h3>
+              </a>
+            </div>
+          
 
           
             <div class="next-post">
-              <a href="https://pigeonstar.club/post/bbr/">
+              <a href="https://pigeonstar.club/post/yjjs/">
                 <h3 class="post-title">
-                  快速开启Google BBR的方法，实现高效单边加速
+                  傻白一键BBR/BBR Plus/魔改BBR/锐速（LotServer）四合一
                   <i class="ri-arrow-right-line"></i>
                 </h3>
               </a>

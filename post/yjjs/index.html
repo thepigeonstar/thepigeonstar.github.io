@@ -36,13 +36,12 @@
             <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E4%BE%9D%E8%B5%96%E5%AE%89%E8%A3%85">依赖安装</a></li>
-<li><a href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">使用方法</a></li>
-<li><a href="#%E7%95%8C%E9%9D%A2%E9%A2%84%E8%A7%88">界面预览</a></li>
-<li><a href="#%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E">操作说明</a>
+<li><a href="#%E5%82%BB%E7%99%BD%E4%B8%80%E9%94%AEbbrbbr-plus%E9%AD%94%E6%94%B9bbr%E9%94%90%E9%80%9F%E6%97%A7%E7%89%88">傻白一键BBR/BBR Plus/魔改BBR/锐速（旧版）</a></li>
+<li><a href="#%E5%82%BB%E7%99%BD%E4%B8%80%E9%94%AEbbrbbr-plus%E9%AD%94%E6%94%B9bbr%E9%94%90%E9%80%9F%E6%96%B0%E7%89%88">傻白一键BBR/BBR Plus/魔改BBR/锐速（新版）</a></li>
+<li><a href="#%E9%87%8D%E6%96%B0%E8%BF%9B%E5%85%A5%E7%AE%A1%E7%90%86%E7%95%8C%E9%9D%A2">重新进入管理界面</a></li>
+<li><a href="#%E8%84%9A%E6%9C%AC%E8%BF%90%E8%A1%8C%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%A6%82%E6%9E%9C%E5%87%BA%E7%8E%B0%E5%A6%82%E4%B8%8B%E6%8F%90%E7%A4%BA%E7%94%A8%E6%96%B9%E5%90%91%E9%94%AE%E9%80%89no%E5%9B%9E%E8%BD%A6">脚本运行过程中，如果出现如下提示，用方向键选No回车</a>
 <ul>
-<li><a href="#%E7%89%88%E6%9D%83%E5%A3%B0%E6%98%8E%E7%89%88%E6%9D%83%E5%BD%92-sunpma-%E6%89%80%E6%9C%89%E8%BD%AC%E8%BD%BD%E8%AF%B7%E6%B3%A8%E6%98%8E%E5%87%BA%E5%A4%84">版权声明：版权归 SunPma 所有，转载请注明出处！</a></li>
-<li><a href="#end">End</a></li>
+<li><a href="#end">END</a></li>
 </ul>
 </li>
 </ul>
@@ -93,59 +92,55 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">VPS服务器24小时Ping值延迟监测工具</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">傻白一键BBR/BBR Plus/魔改BBR/锐速（LotServer）四合一</h1>
         <div class="text-sm text-gray-700 lg:my-8">
           2020-07-03 / 1 min read
         </div>
         
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://pigeonstar.club/post-images/24h.jpg" alt="">
-        
         <div class="post-content yue">
-          <h2 id="依赖安装">依赖安装</h2>
-<p>Debian/Ubuntu</p>
-<pre><code>apt-get update
-apt-get install python wget screen -y
+          <h2 id="傻白一键bbrbbr-plus魔改bbr锐速旧版">傻白一键BBR/BBR Plus/魔改BBR/锐速（旧版）</h2>
+<pre><code>wget &quot;https://github.com/cx9208/Linux-NetSpeed/raw/master/tcp.sh&quot; &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh
 </code></pre>
-<p>CentOS/RHEL</p>
-<pre><code>yum install screen wget python -y
+<h2 id="傻白一键bbrbbr-plus魔改bbr锐速新版">傻白一键BBR/BBR Plus/魔改BBR/锐速（新版）</h2>
+<pre><code>wget -N --no-check-certificate &quot;https://github.com/ylx2016/Linux-NetSpeed/releases/download/sh/tcp.sh&quot; &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh
 </code></pre>
-<h2 id="使用方法">使用方法</h2>
-<pre><code>screen -S uping
-wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/uPing/master/uping.py
-
-python uping.py
+<h2 id="重新进入管理界面">重新进入管理界面</h2>
+<pre><code>./tcp.sh
 </code></pre>
-<p>提示：第一次使用如果出现乱码，退出后重新输入python uping.py即可</p>
-<h2 id="界面预览">界面预览</h2>
-<figure data-type="image" tabindex="1"><img src="https://pigeonstar.club/post-images/1593765122100.jpg" alt="" loading="lazy"></figure>
-<h2 id="操作说明">操作说明</h2>
-<p><strong>退出界面：Ctrl + A + D<br>
-进入界面：screen -r uping<br>
-退出程序：Ctrl + C<br>
-查看screen进程：screen -ls<br>
-结束screen程序：exit</strong></p>
-<h3 id="版权声明版权归-sunpma-所有转载请注明出处">版权声明：版权归 SunPma 所有，转载请注明出处！</h3>
-<p><a href="https://sunpma.com/631.html" title="原创地址">原创地址</a><br>
-<a href="https://github.com/FunctionClub/uPing" title="GitHub">GitHub</a></p>
-<h3 id="end">End</h3>
+<h2 id="脚本运行过程中如果出现如下提示用方向键选no回车">脚本运行过程中，如果出现如下提示，用方向键选No回车</h2>
+<figure data-type="image" tabindex="1"><img src="https://pigeonstar.club/post-images/1593769343118.jpg" alt="" loading="lazy"></figure>
+<h3 id="end">END</h3>
 
         </div>
 
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://pigeonstar.club/tag/WdluVaIKY/">
-            <span class="flex-auto">24h监控ping</span>
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://pigeonstar.club/tag/7Q4GRoI0i/">
+            <span class="flex-auto">傻白BBR</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://pigeonstar.club/tag/uh1JSt_bb/">
+            <span class="flex-auto">BBR</span>
           </a>
         
 
 
         <div class="flex justify-between py-8">
           
+            <div class="prev-post">
+              <a href="https://pigeonstar.club/post/bbr/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  快速开启Google BBR的方法，实现高效单边加速
+                </h3>
+              </a>
+            </div>
+          
 
           
             <div class="next-post">
-              <a href="https://pigeonstar.club/post/bbr/">
+              <a href="https://pigeonstar.club/post/dynh/">
                 <h3 class="post-title">
-                  快速开启Google BBR的方法，实现高效单边加速
+                  卸载BBR多余内核
                   <i class="ri-arrow-right-line"></i>
                 </h3>
               </a>
