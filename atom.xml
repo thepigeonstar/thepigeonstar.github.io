@@ -2,11 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pigeonstar.club</id>
     <title>Ace pigeon</title>
-    <updated>2020-07-05T10:56:23.570Z</updated>
+    <updated>2020-07-05T11:03:06.043Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pigeonstar.club"/>
     <link rel="self" href="https://pigeonstar.club/atom.xml"/>
-    <subtitle>备份用</subtitle>
     <logo>https://pigeonstar.club/images/avatar.png</logo>
     <icon>https://pigeonstar.club/favicon.ico</icon>
     <rights>All rights reserved 2020, Ace pigeon</rights>
