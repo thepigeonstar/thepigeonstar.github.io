@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pigeonstar.club</id>
     <title>Ace pigeon</title>
-    <updated>2020-07-03T09:48:59.897Z</updated>
+    <updated>2020-07-05T10:51:50.982Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pigeonstar.club"/>
     <link rel="self" href="https://pigeonstar.club/atom.xml"/>
@@ -152,6 +152,56 @@ service ntpd start                #启动 ntp 服务
 </code></pre>
 <p>确认一下时区和时间是否正确，无误即可。</p>
 <p><a href="http://https://www.xiaoyu518.com/index.php/author/cxy870724/" title="原文地址：感谢cxy870724">原文地址：感谢cxy870724</a></p>
+<h3 id="end">End</h3>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[一键傻白回程路由or测速]]></title>
+        <id>https://pigeonstar.club/post/hccs/</id>
+        <link href="https://pigeonstar.club/post/hccs/">
+        </link>
+        <updated>2020-07-01T03:48:25.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="vps回程路由测试">VPS回程路由测试</h2>
+<pre><code>wget https://raw.githubusercontent.com/nanqinlang-script/testrace/master/testrace.sh
+
+bash testrace.sh
+</code></pre>
+<h2 id="superspeedsh脚本">SuperSpeed.sh脚本</h2>
+<pre><code>wget https://raw.githubusercontent.com/oooldking/script/master/superspeed.sh &amp;&amp; chmod +x superspeed.sh &amp;&amp; ./superspeed.sh
+</code></pre>
+<h2 id="服务器到国内的速度脚本superspeed加强版sh">服务器到国内的速度脚本Superspeed加强版.sh</h2>
+<pre><code>wget https://raw.githubusercontent.com/oooldking/script/master/superspeed.sh
+chmod +x superspeed.sh
+./superspeed.sh
+</code></pre>
+<h2 id="benchsh强化版superbenchsh">bench.sh强化版：SuperBench.sh</h2>
+<pre><code>wget -qO- https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash
+或者
+curl -Lso- https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash
+</code></pre>
+<h2 id="iperf3-测试本地到-vps-的连接速度">iperf3 测试本地到 VPS 的连接速度</h2>
+<p>CentOS</p>
+<pre><code>yum -y install iperf3
+</code></pre>
+<p>Debian/Ubuntu</p>
+<pre><code>apt-get -y install iperf3
+</code></pre>
+<h2 id="iperf3-测速用法">iperf3 测速用法</h2>
+<p>先在 VPS 上运行 iperf3 进程。其中 -s 参数表示服务器端，-p 指定使用端口（默认端口 5201，别忘了防火墙放行端口），如果需要以守护进程后台运行，追加 -D 参数。</p>
+<pre><code>iperf3 -s -p 5201
+</code></pre>
+<p>然后在本机发起测速。其中 -c 参数表示客户端并指定测速服务器地址，-p 指定服务器端口，-t 指定测试时长（单位秒），-P 指定并发连接数（越高越能测试到速度极限），-R 表示下载测速（不加参数则测试上传速度），如果要测试 UDP 连接，追加 -u 参数。<br>
+<a href="http://software.es.net/iperf/invoking.html#iperf3-manual-page" title="点此查看完整参数">点此查看完整参数</a></p>
+<pre><code>iperf3 -c x.x.x.x -p 5201 -t 60 -P 10 -R
+</code></pre>
+<h2 id="vps性能综合跑分工具unixbench">VPS性能综合跑分工具：unixbench</h2>
+<pre><code>wget --no-check-certificate https://github.com/teddysun/across/raw/master/unixbench.sh
+chmod +x unixbench.sh
+./unixbench.sh
+</code></pre>
+<h2 id="zbench">ZBench</h2>
+<pre><code>wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/ZBench/master/ZBench-CN.sh &amp;&amp; bash ZBench-CN.sh
+</code></pre>
 <h3 id="end">End</h3>
 ]]></content>
     </entry>

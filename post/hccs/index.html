@@ -36,7 +36,18 @@
             <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E7%89%B9%E6%80%A7">特性👇</a></li>
+<li><a href="#vps%E5%9B%9E%E7%A8%8B%E8%B7%AF%E7%94%B1%E6%B5%8B%E8%AF%95">VPS回程路由测试</a></li>
+<li><a href="#superspeedsh%E8%84%9A%E6%9C%AC">SuperSpeed.sh脚本</a></li>
+<li><a href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%B0%E5%9B%BD%E5%86%85%E7%9A%84%E9%80%9F%E5%BA%A6%E8%84%9A%E6%9C%ACsuperspeed%E5%8A%A0%E5%BC%BA%E7%89%88sh">服务器到国内的速度脚本Superspeed加强版.sh</a></li>
+<li><a href="#benchsh%E5%BC%BA%E5%8C%96%E7%89%88superbenchsh">bench.sh强化版：SuperBench.sh</a></li>
+<li><a href="#iperf3-%E6%B5%8B%E8%AF%95%E6%9C%AC%E5%9C%B0%E5%88%B0-vps-%E7%9A%84%E8%BF%9E%E6%8E%A5%E9%80%9F%E5%BA%A6">iperf3 测试本地到 VPS 的连接速度</a></li>
+<li><a href="#iperf3-%E6%B5%8B%E9%80%9F%E7%94%A8%E6%B3%95">iperf3 测速用法</a></li>
+<li><a href="#vps%E6%80%A7%E8%83%BD%E7%BB%BC%E5%90%88%E8%B7%91%E5%88%86%E5%B7%A5%E5%85%B7unixbench">VPS性能综合跑分工具：unixbench</a></li>
+<li><a href="#zbench">ZBench</a>
+<ul>
+<li><a href="#end">End</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -85,46 +96,78 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">Hello Gridea</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">一键傻白回程路由or测速</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2018-12-12 / 2 min read
+          2020-07-01 / 2 min read
         </div>
-        
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://pigeonstar.club/post-images/hello-gridea.png" alt="">
         
         <div class="post-content yue">
-          <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+          <h2 id="vps回程路由测试">VPS回程路由测试</h2>
+<pre><code>wget https://raw.githubusercontent.com/nanqinlang-script/testrace/master/testrace.sh
+
+bash testrace.sh
+</code></pre>
+<h2 id="superspeedsh脚本">SuperSpeed.sh脚本</h2>
+<pre><code>wget https://raw.githubusercontent.com/oooldking/script/master/superspeed.sh &amp;&amp; chmod +x superspeed.sh &amp;&amp; ./superspeed.sh
+</code></pre>
+<h2 id="服务器到国内的速度脚本superspeed加强版sh">服务器到国内的速度脚本Superspeed加强版.sh</h2>
+<pre><code>wget https://raw.githubusercontent.com/oooldking/script/master/superspeed.sh
+chmod +x superspeed.sh
+./superspeed.sh
+</code></pre>
+<h2 id="benchsh强化版superbenchsh">bench.sh强化版：SuperBench.sh</h2>
+<pre><code>wget -qO- https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash
+或者
+curl -Lso- https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash
+</code></pre>
+<h2 id="iperf3-测试本地到-vps-的连接速度">iperf3 测试本地到 VPS 的连接速度</h2>
+<p>CentOS</p>
+<pre><code>yum -y install iperf3
+</code></pre>
+<p>Debian/Ubuntu</p>
+<pre><code>apt-get -y install iperf3
+</code></pre>
+<h2 id="iperf3-测速用法">iperf3 测速用法</h2>
+<p>先在 VPS 上运行 iperf3 进程。其中 -s 参数表示服务器端，-p 指定使用端口（默认端口 5201，别忘了防火墙放行端口），如果需要以守护进程后台运行，追加 -D 参数。</p>
+<pre><code>iperf3 -s -p 5201
+</code></pre>
+<p>然后在本机发起测速。其中 -c 参数表示客户端并指定测速服务器地址，-p 指定服务器端口，-t 指定测试时长（单位秒），-P 指定并发连接数（越高越能测试到速度极限），-R 表示下载测速（不加参数则测试上传速度），如果要测试 UDP 连接，追加 -u 参数。<br>
+<a href="http://software.es.net/iperf/invoking.html#iperf3-manual-page" title="点此查看完整参数">点此查看完整参数</a></p>
+<pre><code>iperf3 -c x.x.x.x -p 5201 -t 60 -P 10 -R
+</code></pre>
+<h2 id="vps性能综合跑分工具unixbench">VPS性能综合跑分工具：unixbench</h2>
+<pre><code>wget --no-check-certificate https://github.com/teddysun/across/raw/master/unixbench.sh
+chmod +x unixbench.sh
+./unixbench.sh
+</code></pre>
+<h2 id="zbench">ZBench</h2>
+<pre><code>wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/ZBench/master/ZBench-CN.sh &amp;&amp; bash ZBench-CN.sh
+</code></pre>
+<h3 id="end">End</h3>
 
         </div>
 
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://pigeonstar.club/tag/U43jJkeMK/">
-            <span class="flex-auto">Gridea</span>
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://pigeonstar.club/tag/0iAJ5Glfw/">
+            <span class="flex-auto">回程</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://pigeonstar.club/tag/WDWAxtMVq1/">
+            <span class="flex-auto">测速</span>
           </a>
         
 
 
         <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="https://pigeonstar.club/post/sjtb/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  解决VPS时间和本地时间不同
+                </h3>
+              </a>
+            </div>
           
 
           
