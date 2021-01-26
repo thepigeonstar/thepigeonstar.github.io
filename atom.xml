@@ -2,13 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pigeonstar.club</id>
     <title>Ace pigeon</title>
-    <updated>2020-07-22T05:55:41.870Z</updated>
+    <updated>2021-01-26T04:37:40.646Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pigeonstar.club"/>
     <link rel="self" href="https://pigeonstar.club/atom.xml"/>
     <logo>https://pigeonstar.club/images/avatar.png</logo>
     <icon>https://pigeonstar.club/favicon.ico</icon>
-    <rights>All rights reserved 2020, Ace pigeon</rights>
+    <rights>All rights reserved 2021, Ace pigeon</rights>
     <entry>
         <title type="html"><![CDATA[常用指令]]></title>
         <id>https://pigeonstar.club/post/chang-yong-zhi-ling/</id>
