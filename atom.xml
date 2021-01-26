@@ -2,13 +2,35 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pigeonstar.club</id>
     <title>Ace pigeon</title>
-    <updated>2021-01-26T04:37:40.646Z</updated>
+    <updated>2021-01-26T05:32:27.372Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pigeonstar.club"/>
     <link rel="self" href="https://pigeonstar.club/atom.xml"/>
     <logo>https://pigeonstar.club/images/avatar.png</logo>
     <icon>https://pigeonstar.club/favicon.ico</icon>
     <rights>All rights reserved 2021, Ace pigeon</rights>
+    <entry>
+        <title type="html"><![CDATA[基金持仓成本价怎么变低？基金持仓成本价是什么意思]]></title>
+        <id>https://pigeonstar.club/post/ji-jin-chi-cang-cheng-ben-jie-zen-me-bian-di-ji-jin-chi-cang-cheng-ben-jie-shi-shi-me-yi-si/</id>
+        <link href="https://pigeonstar.club/post/ji-jin-chi-cang-cheng-ben-jie-zen-me-bian-di-ji-jin-chi-cang-cheng-ben-jie-shi-shi-me-yi-si/">
+        </link>
+        <updated>2021-01-26T04:41:20.000Z</updated>
+        <content type="html"><![CDATA[<p>基金持仓成本的高低直接影响投资者的收益，投资者在购买基金之后，经常会碰到，其持仓成本与首次买入相比，降低了</p>
+<h2 id="基金持仓成本价怎么算">基金持仓成本价怎么算</h2>
+<p>基金持仓成本下降的原因主要如下：</p>
+<h4 id="1-基金出现分拆的情况">1、基金出现分拆的情况</h4>
+<p>投资者所购买的基金出现分拆的情况，即基金投资人资产总值不变的前提下，改变基金份额净值和基金总份额的对应关系，重新计算基金资产的一种方式，分拆之后基金份额增加，而单位份额的净值减少，因单位份额的净值减少，其基金持仓成本也会相应的下调。</p>
+<h4 id="2-基金出现现金分红的情况">2、基金出现现金分红的情况</h4>
+<p>基金现金分红是指基金公司将基金收益的一部分，以现金方式派发给基金投资者的一种分红方式，分红之后，投资者总资产不会改变，其基金净值会作出相应的下调，持仓成本跟随基金净值的下调而下调。</p>
+<h4 id="3-投资者进行做t操作">3、投资者进行做T操作</h4>
+<p>投资者在基金盈利的情况下进行做T操作，卖出一部分基金份额，卖出这部分基金获取的收益会平摊到剩余基金份额中，从而降低投资者的持仓成本。</p>
+<p>比如，投资者在基金净值1元的时候，买入1000份基金，等到基金净值1.5元的时候，卖出基金500份，在不考虑手续费用的情况下，投资者获利250元，其持仓成本=(<em>1000×1-1.5×500)/500=0.5元。</em></p>
+<h4 id="4-在基金走势下跌过程中进行补仓操作">4、在基金走势下跌过程中，进行补仓操作</h4>
+<p>投资者在基金走势下跌过程中，进行补仓操作，随着基金持有份额的增加，会降低其持仓成本。</p>
+<p>比如，投资者在基金净值1元时，买入1000份，等到基金净值为0.9元时，再买入1000份，则其持仓成本价=(1000×1+0.9×1000)/2000=0.95元。</p>
+<p>END</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[常用指令]]></title>
         <id>https://pigeonstar.club/post/chang-yong-zhi-ling/</id>

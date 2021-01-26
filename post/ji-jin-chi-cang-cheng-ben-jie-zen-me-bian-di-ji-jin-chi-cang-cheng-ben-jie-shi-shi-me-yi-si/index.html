@@ -36,11 +36,13 @@
             <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E6%9F%A5%E7%9C%8B%E7%A3%81%E7%9B%98%E6%83%85%E5%86%B5">查看磁盘情况</a></li>
-<li><a href="#%E6%9F%A5%E7%9C%8B%E7%A3%81%E7%9B%98%E4%BD%BF%E7%94%A8%E5%8D%A0%E6%AF%94">查看磁盘使用占比</a></li>
-<li><a href="#%E6%9F%A5%E7%9C%8B%E8%AF%A5%E7%9B%AE%E5%BD%95%E4%B8%8B%E4%BD%BF%E7%94%A8%E5%8D%A0%E6%AF%94">查看该目录下使用占比</a>
+<li><a href="#%E5%9F%BA%E9%87%91%E6%8C%81%E4%BB%93%E6%88%90%E6%9C%AC%E4%BB%B7%E6%80%8E%E4%B9%88%E7%AE%97">基金持仓成本价怎么算</a><br>
+*
 <ul>
-<li><a href="#end">End</a></li>
+<li><a href="#1-%E5%9F%BA%E9%87%91%E5%87%BA%E7%8E%B0%E5%88%86%E6%8B%86%E7%9A%84%E6%83%85%E5%86%B5">1、基金出现分拆的情况</a></li>
+<li><a href="#2-%E5%9F%BA%E9%87%91%E5%87%BA%E7%8E%B0%E7%8E%B0%E9%87%91%E5%88%86%E7%BA%A2%E7%9A%84%E6%83%85%E5%86%B5">2、基金出现现金分红的情况</a></li>
+<li><a href="#3-%E6%8A%95%E8%B5%84%E8%80%85%E8%BF%9B%E8%A1%8C%E5%81%9At%E6%93%8D%E4%BD%9C">3、投资者进行做T操作</a></li>
+<li><a href="#4-%E5%9C%A8%E5%9F%BA%E9%87%91%E8%B5%B0%E5%8A%BF%E4%B8%8B%E8%B7%8C%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%BF%9B%E8%A1%8C%E8%A1%A5%E4%BB%93%E6%93%8D%E4%BD%9C">4、在基金走势下跌过程中，进行补仓操作</a></li>
 </ul>
 </li>
 </ul>
@@ -91,22 +93,26 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">常用指令</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">基金持仓成本价怎么变低？基金持仓成本价是什么意思</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2020-07-08 / 1 min read
+          2021-01-26 / 2 min read
         </div>
         
         <div class="post-content yue">
-          <h2 id="查看磁盘情况">查看磁盘情况</h2>
-<pre><code>df -h
-</code></pre>
-<h2 id="查看磁盘使用占比">查看磁盘使用占比</h2>
-<pre><code>du -sh /*
-</code></pre>
-<h2 id="查看该目录下使用占比">查看该目录下使用占比</h2>
-<pre><code>du -sh /####/*    (#号内替换成要查看的目录)
-</code></pre>
-<h3 id="end">End</h3>
+          <p>基金持仓成本的高低直接影响投资者的收益，投资者在购买基金之后，经常会碰到，其持仓成本与首次买入相比，降低了</p>
+<h2 id="基金持仓成本价怎么算">基金持仓成本价怎么算</h2>
+<p>基金持仓成本下降的原因主要如下：</p>
+<h4 id="1-基金出现分拆的情况">1、基金出现分拆的情况</h4>
+<p>投资者所购买的基金出现分拆的情况，即基金投资人资产总值不变的前提下，改变基金份额净值和基金总份额的对应关系，重新计算基金资产的一种方式，分拆之后基金份额增加，而单位份额的净值减少，因单位份额的净值减少，其基金持仓成本也会相应的下调。</p>
+<h4 id="2-基金出现现金分红的情况">2、基金出现现金分红的情况</h4>
+<p>基金现金分红是指基金公司将基金收益的一部分，以现金方式派发给基金投资者的一种分红方式，分红之后，投资者总资产不会改变，其基金净值会作出相应的下调，持仓成本跟随基金净值的下调而下调。</p>
+<h4 id="3-投资者进行做t操作">3、投资者进行做T操作</h4>
+<p>投资者在基金盈利的情况下进行做T操作，卖出一部分基金份额，卖出这部分基金获取的收益会平摊到剩余基金份额中，从而降低投资者的持仓成本。</p>
+<p>比如，投资者在基金净值1元的时候，买入1000份基金，等到基金净值1.5元的时候，卖出基金500份，在不考虑手续费用的情况下，投资者获利250元，其持仓成本=(<em>1000×1-1.5×500)/500=0.5元。</em></p>
+<h4 id="4-在基金走势下跌过程中进行补仓操作">4、在基金走势下跌过程中，进行补仓操作</h4>
+<p>投资者在基金走势下跌过程中，进行补仓操作，随着基金持有份额的增加，会降低其持仓成本。</p>
+<p>比如，投资者在基金净值1元时，买入1000份，等到基金净值为0.9元时，再买入1000份，则其持仓成本价=(1000×1+0.9×1000)/2000=0.95元。</p>
+<p>END</p>
 
         </div>
 
@@ -115,21 +121,12 @@
 
         <div class="flex justify-between py-8">
           
-            <div class="prev-post">
-              <a href="https://pigeonstar.club/post/ji-jin-chi-cang-cheng-ben-jie-zen-me-bian-di-ji-jin-chi-cang-cheng-ben-jie-shi-shi-me-yi-si/">
-                <h3 class="post-title">
-                  <i class="ri-arrow-left-line"></i>
-                  基金持仓成本价怎么变低？基金持仓成本价是什么意思
-                </h3>
-              </a>
-            </div>
-          
 
           
             <div class="next-post">
-              <a href="https://pigeonstar.club/post/24h/">
+              <a href="https://pigeonstar.club/post/chang-yong-zhi-ling/">
                 <h3 class="post-title">
-                  VPS服务器24小时Ping值延迟监测工具
+                  常用指令
                   <i class="ri-arrow-right-line"></i>
                 </h3>
               </a>
